@@ -44,7 +44,7 @@ export default defineConfig({
                                 const stat = await fs.stat(filePath);
                                 if (stat.isDirectory()) {
                                     processPromises.push(walkDir(filePath));
-                                } else if (/\.(js|html)$/i.test(file)) {
+                                } else if (/\.(js)$/i.test(file)) {
                                     processPromises.push(processFile(filePath));
                                 }
                             }
